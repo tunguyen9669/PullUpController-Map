@@ -10,7 +10,6 @@ import UIKit
 import MapKit
 import PullUpController
 
-
 class SearchViewController: PullUpController {
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
@@ -113,7 +112,10 @@ extension SearchViewController: UITableViewDataSource, UITableViewDelegate {
         view.endEditing(true)
 //        pullUpControllerMoveToVisiblePoint(pullUpControllerMiddleStickyPoints[0], animated: true, completion: nil)
         
-        (parent as? MapViewController)?.zoom(to: locations[indexPath.row].location)
+//        (parent as? MapViewController)?.zoom(to: locations[indexPath.row].location)
+        let index = locations[indexPath.row]
+        (parent as? MapViewController)?.setupMap(Float(index.location.latitude), Float(index.location.longitude), index.title)
+        
     }
 }
 
