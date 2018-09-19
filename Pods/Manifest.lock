@@ -1,0 +1,16 @@
+PODS:
+  - PullUpController (0.4.1)
+
+DEPENDENCIES:
+  - PullUpController
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - PullUpController
+
+SPEC CHECKSUMS:
+  PullUpController: c5b83f5f02aa2d952128b8a86b4142e446fdc2df
+
+PODFILE CHECKSUM: 95947e36b98732642a38a41f788f9f1c61ad9a21
+
+COCOAPODS: 1.5.3

@@ -1,0 +1,6 @@
+framework module Pods_SuperMapTests {
+  umbrella header "Pods-SuperMapTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
