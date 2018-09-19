@@ -8,6 +8,7 @@
 
 import UIKit
 import MapKit
+import GoogleMaps
 
 class MapViewController: UIViewController {
     
@@ -67,6 +68,7 @@ class MapViewController: UIViewController {
     }
     
     func zoom(to location: CLLocationCoordinate2D) {
+        let camera = GMSCameraPosition.camera(withLatitude: -33.86, longitude: 151.20, zoom: 6.0)
         let span = MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05)
         let region = MKCoordinateRegionMake(location, span)
         
