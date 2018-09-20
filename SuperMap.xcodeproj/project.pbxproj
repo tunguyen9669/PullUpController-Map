@@ -9,6 +9,22 @@
 /* Begin PBXBuildFile section */
 		055B5DED0C13F0F4CEDB24B8 /* Pods_SuperMap.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 602E78B01AE0EA0315D5D37A /* Pods_SuperMap.framework */; };
 		0B07E0ED5CBA968D309F01C4 /* Pods_SuperMapTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 526FD7DF5C625455DFB3CD66 /* Pods_SuperMapTests.framework */; };
+		842FDF54215352060071A533 /* GeocodedWaypointDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842FDF53215352060071A533 /* GeocodedWaypointDTO.swift */; };
+		842FDF56215352290071A533 /* BoundsDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842FDF55215352290071A533 /* BoundsDTO.swift */; };
+		842FDF58215352460071A533 /* DirectionOverviewDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842FDF57215352460071A533 /* DirectionOverviewDTO.swift */; };
+		842FDF5A2153525F0071A533 /* GoogleValueDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842FDF592153525F0071A533 /* GoogleValueDTO.swift */; };
+		842FDF5C215352770071A533 /* LegDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842FDF5B215352770071A533 /* LegDTO.swift */; };
+		842FDF5E215352830071A533 /* LocationDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842FDF5D215352830071A533 /* LocationDTO.swift */; };
+		842FDF60215352940071A533 /* PolylineDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842FDF5F215352940071A533 /* PolylineDTO.swift */; };
+		842FDF62215352A10071A533 /* RouteDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842FDF61215352A10071A533 /* RouteDTO.swift */; };
+		842FDF6721535EE40071A533 /* APIServiceAgent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842FDF6621535EE40071A533 /* APIServiceAgent.swift */; };
+		842FDF6921535EF80071A533 /* APIServiceObjcet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842FDF6821535EF80071A533 /* APIServiceObjcet.swift */; };
+		842FDF6B21535F0B0071A533 /* APIRequestProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842FDF6A21535F0B0071A533 /* APIRequestProvider.swift */; };
+		842FDF6D21535F1E0071A533 /* DirectionServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842FDF6C21535F1E0071A533 /* DirectionServices.swift */; };
+		842FDF7121537AC60071A533 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842FDF7021537AC60071A533 /* Constants.swift */; };
+		842FDF76215385720071A533 /* DerectionOverviewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842FDF75215385720071A533 /* DerectionOverviewModel.swift */; };
+		842FDF78215386E90071A533 /* Bounds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842FDF77215386E90071A533 /* Bounds.swift */; };
+		842FDF7A2153870F0071A533 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842FDF792153870F0071A533 /* Location.swift */; };
 		84846BBE2152110800EBBB8F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84846BBD2152110800EBBB8F /* AppDelegate.swift */; };
 		84846BC02152110800EBBB8F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84846BBF2152110800EBBB8F /* ViewController.swift */; };
 		84846BC32152110800EBBB8F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84846BC12152110800EBBB8F /* Main.storyboard */; };
@@ -48,6 +64,22 @@
 		526FD7DF5C625455DFB3CD66 /* Pods_SuperMapTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SuperMapTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		602E78B01AE0EA0315D5D37A /* Pods_SuperMap.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SuperMap.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7850F454507AF2DE332F1D56 /* Pods-SuperMapTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SuperMapTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SuperMapTests/Pods-SuperMapTests.release.xcconfig"; sourceTree = "<group>"; };
+		842FDF53215352060071A533 /* GeocodedWaypointDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeocodedWaypointDTO.swift; sourceTree = "<group>"; };
+		842FDF55215352290071A533 /* BoundsDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoundsDTO.swift; sourceTree = "<group>"; };
+		842FDF57215352460071A533 /* DirectionOverviewDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectionOverviewDTO.swift; sourceTree = "<group>"; };
+		842FDF592153525F0071A533 /* GoogleValueDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleValueDTO.swift; sourceTree = "<group>"; };
+		842FDF5B215352770071A533 /* LegDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LegDTO.swift; sourceTree = "<group>"; };
+		842FDF5D215352830071A533 /* LocationDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDTO.swift; sourceTree = "<group>"; };
+		842FDF5F215352940071A533 /* PolylineDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PolylineDTO.swift; sourceTree = "<group>"; };
+		842FDF61215352A10071A533 /* RouteDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteDTO.swift; sourceTree = "<group>"; };
+		842FDF6621535EE40071A533 /* APIServiceAgent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIServiceAgent.swift; sourceTree = "<group>"; };
+		842FDF6821535EF80071A533 /* APIServiceObjcet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIServiceObjcet.swift; sourceTree = "<group>"; };
+		842FDF6A21535F0B0071A533 /* APIRequestProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequestProvider.swift; sourceTree = "<group>"; };
+		842FDF6C21535F1E0071A533 /* DirectionServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectionServices.swift; sourceTree = "<group>"; };
+		842FDF7021537AC60071A533 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		842FDF75215385720071A533 /* DerectionOverviewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DerectionOverviewModel.swift; sourceTree = "<group>"; };
+		842FDF77215386E90071A533 /* Bounds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bounds.swift; sourceTree = "<group>"; };
+		842FDF792153870F0071A533 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		84846BBA2152110800EBBB8F /* SuperMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SuperMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84846BBD2152110800EBBB8F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84846BBF2152110800EBBB8F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -111,6 +143,50 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		842FDF4E215351230071A533 /* DTOs */ = {
+			isa = PBXGroup;
+			children = (
+				842FDF592153525F0071A533 /* GoogleValueDTO.swift */,
+				842FDF5D215352830071A533 /* LocationDTO.swift */,
+				842FDF5F215352940071A533 /* PolylineDTO.swift */,
+				842FDF55215352290071A533 /* BoundsDTO.swift */,
+				842FDF5B215352770071A533 /* LegDTO.swift */,
+				842FDF61215352A10071A533 /* RouteDTO.swift */,
+				842FDF57215352460071A533 /* DirectionOverviewDTO.swift */,
+				842FDF53215352060071A533 /* GeocodedWaypointDTO.swift */,
+			);
+			path = DTOs;
+			sourceTree = "<group>";
+		};
+		842FDF6521535E420071A533 /* APIs */ = {
+			isa = PBXGroup;
+			children = (
+				842FDF6621535EE40071A533 /* APIServiceAgent.swift */,
+				842FDF6821535EF80071A533 /* APIServiceObjcet.swift */,
+				842FDF6A21535F0B0071A533 /* APIRequestProvider.swift */,
+				842FDF6C21535F1E0071A533 /* DirectionServices.swift */,
+			);
+			path = APIs;
+			sourceTree = "<group>";
+		};
+		842FDF6E21537AA00071A533 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				842FDF7021537AC60071A533 /* Constants.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		842FDF722153853A0071A533 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				842FDF75215385720071A533 /* DerectionOverviewModel.swift */,
+				842FDF77215386E90071A533 /* Bounds.swift */,
+				842FDF792153870F0071A533 /* Location.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		84846BB12152110800EBBB8F = {
 			isa = PBXGroup;
 			children = (
@@ -136,6 +212,10 @@
 		84846BBC2152110800EBBB8F /* SuperMap */ = {
 			isa = PBXGroup;
 			children = (
+				842FDF722153853A0071A533 /* Model */,
+				842FDF6E21537AA00071A533 /* Helper */,
+				842FDF6521535E420071A533 /* APIs */,
+				842FDF4E215351230071A533 /* DTOs */,
 				84846BEC2152119500EBBB8F /* Main */,
 				84846BEB2152117700EBBB8F /* Search */,
 				84846BBD2152110800EBBB8F /* AppDelegate.swift */,
@@ -359,11 +439,15 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-SuperMap/Pods-SuperMap-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/PullUpController/PullUpController.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PullUpController.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -433,11 +517,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				842FDF5E215352830071A533 /* LocationDTO.swift in Sources */,
+				842FDF6D21535F1E0071A533 /* DirectionServices.swift in Sources */,
+				842FDF6B21535F0B0071A533 /* APIRequestProvider.swift in Sources */,
+				842FDF62215352A10071A533 /* RouteDTO.swift in Sources */,
 				84846BEF215211B100EBBB8F /* SearchViewController.swift in Sources */,
 				84846BC02152110800EBBB8F /* ViewController.swift in Sources */,
+				842FDF78215386E90071A533 /* Bounds.swift in Sources */,
+				842FDF60215352940071A533 /* PolylineDTO.swift in Sources */,
 				84846BF321521F3900EBBB8F /* SearchResultCell.swift in Sources */,
+				842FDF6921535EF80071A533 /* APIServiceObjcet.swift in Sources */,
+				842FDF6721535EE40071A533 /* APIServiceAgent.swift in Sources */,
+				842FDF56215352290071A533 /* BoundsDTO.swift in Sources */,
+				842FDF5A2153525F0071A533 /* GoogleValueDTO.swift in Sources */,
+				842FDF7A2153870F0071A533 /* Location.swift in Sources */,
+				842FDF76215385720071A533 /* DerectionOverviewModel.swift in Sources */,
+				842FDF58215352460071A533 /* DirectionOverviewDTO.swift in Sources */,
+				842FDF5C215352770071A533 /* LegDTO.swift in Sources */,
 				84846BF7215222BF00EBBB8F /* MapViewController.swift in Sources */,
+				842FDF54215352060071A533 /* GeocodedWaypointDTO.swift in Sources */,
 				84846BBE2152110800EBBB8F /* AppDelegate.swift in Sources */,
+				842FDF7121537AC60071A533 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

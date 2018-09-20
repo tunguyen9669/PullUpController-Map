@@ -18,8 +18,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        GMSServices.provideAPIKey("AIzaSyBAzzrYHXI1s6TmXUMaRtmUX40jKoFW_mI")
-        GMSPlacesClient.provideAPIKey("AIzaSyBAzzrYHXI1s6TmXUMaRtmUX40jKoFW_mI")
+        GMSServices.provideAPIKey(API_KEY)
+        GMSPlacesClient.provideAPIKey(API_KEY)
         window = UIWindow(frame: UIScreen.main.bounds)
         setupNav()
         setupNavStyle()

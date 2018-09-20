@@ -16,6 +16,10 @@ class MapViewController: UIViewController {
     @IBAction func increaseZoom(_ sender: Any) {
     }
     let locationManager = CLLocationManager()
+    var originLatitude: Double = 0
+    var originLongtitude: Double = 0
+    var destinationLatitude: Double = 0
+    var destinationLongtitude: Double = 0
     var zoom: Float = 6.0
     
     @IBOutlet weak var mapView: GMSMapView!
@@ -32,19 +36,37 @@ class MapViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let directionService = DirectionService()
+        UIApplication.shared.isNetworkActivityIndicatorVisible = true
+        directionService.getDirection("Toronto", "Montreal", API_KEY) { (result) in
+            UIApplication.shared.isNetworkActivityIndicatorVisible = false
+            switch result {
+            case .success(let location):
+                let direction = DerectionOverviewModel(location)
+                for item in direction.routes {
+                    print(item.bounds.northeast.latitude)
+                    print("Latitude")
+                }
+                break
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
+       
+                           
         // Create a GMSCameraPosition that tells the map to display the
         // coordinate -33.86,151.20 at zoom level 6.
+        locationManager.delegate = self
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
         mapView.settings.myLocationButton = true
         mapView.isMyLocationEnabled = true
         mapView.delegate = self
-        locationManager.delegate = self
-        locationManager.desiredAccuracy = kCLLocationAccuracyBest
         if CLLocationManager.authorizationStatus() != .authorizedWhenInUse {
             locationManager.requestWhenInUseAuthorization()
         } else {
             locationManager.startUpdatingLocation()
         }
-//        mapView.delegate = self
+        mapView.delegate = self
         setupNavigation()
         addPullUpController()
 
@@ -54,6 +76,25 @@ class MapViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    func getDirection(_ origin: String, _ destination: String) {
+        let directionService = DirectionService()
+        UIApplication.shared.isNetworkActivityIndicatorVisible = true
+        directionService.getDirection(origin, destination, API_KEY) { (result) in
+            UIApplication.shared.isNetworkActivityIndicatorVisible = false
+            switch result {
+            case .success(let location):
+                let direction = DerectionOverviewModel(location)
+                for item in direction.routes {
+                    let latitude = item.bounds.northeast.latitude
+                    let longtitude = item.bounds.southwest.longtitude
+                    self.setupMap(Float(latitude), Float(longtitude), destination)
+                }
+                break
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
     }
     func setupNavigation() {
         navigationItem.title = "MAP MAP MAP"
@@ -93,7 +134,7 @@ class MapViewController: UIViewController {
 //        mapView.setRegion(region, animated: true)
 //    }
     func setupMap(_ latitude: Float, _ longtitude: Float, _ title: String) {
-        let camera = GMSCameraPosition.camera(withLatitude: CLLocationDegrees(latitude), longitude: CLLocationDegrees(longtitude), zoom: 15.0)
+        let camera = GMSCameraPosition.camera(withLatitude: CLLocationDegrees(latitude), longitude: CLLocationDegrees(longtitude), zoom: 6.0)
         self.mapView.camera = camera
         let marker = GMSMarker()
         marker.position = CLLocationCoordinate2D(latitude: CLLocationDegrees(latitude), longitude: CLLocationDegrees(longtitude))
@@ -107,7 +148,13 @@ extension MapViewController: CLLocationManagerDelegate {
                          didUpdateLocations locations: [CLLocation]) {
         manager.stopUpdatingLocation()
         if let location: CLLocation = locations.last {
-            let camera = GMSCameraPosition.camera(withLatitude: locationLatitude, longitude: locationLongtitude, zoom: zoomLevel)
+            let locationLatitude = location.coordinate.latitude
+            let locationLongtitude = location.coordinate.longitude
+            self.originLatitude = locationLatitude
+            self.originLongtitude = locationLongtitude
+            let camera = GMSCameraPosition.camera(
+                withLatitude: locationLatitude,
+                longitude: locationLongtitude, zoom: 15.0)
             if mapView.isHidden {
                 mapView.isHidden = false
                 mapView.camera = camera
@@ -132,3 +179,13 @@ extension MapViewController: CLLocationManagerDelegate {
         print("Error: \(error)")
     }
 }
+
+extension MapViewController: GMSMapViewDelegate {
+    func mapView(_ mapView: GMSMapView, didLongPressAt coordinate: CLLocationCoordinate2D) {
+        self.destinationLatitude = coordinate.latitude
+        self.destinationLongtitude = coordinate.longitude
+        let marker = GMSMarker(position: coordinate)
+        marker.map = self.mapView
+    }
+}
+
