@@ -12,6 +12,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SearchViewController" customModule="SuperMap" customModuleProvider="target">
             <connections>
+                <outlet property="endLocation" destination="fvt-0M-txY" id="YRD-0L-OLe"/>
+                <outlet property="separatorSearchView" destination="YLf-6K-SJ2" id="ZFA-Ot-Ica"/>
+                <outlet property="startLocation" destination="Iae-yI-TOF" id="QGR-k6-Vyh"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -26,10 +29,16 @@
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fvt-0M-txY">
                             <rect key="frame" x="20" y="100" width="335" height="30"/>
                             <state key="normal" title="Button"/>
+                            <connections>
+                                <action selector="openEndLocation:" destination="-1" eventType="touchUpInside" id="pBC-e5-Bt9"/>
+                            </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Iae-yI-TOF">
                             <rect key="frame" x="20" y="62" width="335" height="30"/>
                             <state key="normal" title="Button"/>
+                            <connections>
+                                <action selector="openStartLocation:" destination="-1" eventType="touchUpInside" id="7eM-Qb-zeu"/>
+                            </connections>
                         </button>
                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="StartLocation" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="W5t-6q-q5r">
                             <rect key="frame" x="20" y="62" width="335" height="30"/>
@@ -45,7 +54,7 @@
                         </textField>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YLf-6K-SJ2">
                             <rect key="frame" x="167" y="0.0" width="40" height="10"/>
-                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="backgroundColor" white="0.66318500905797106" alpha="0.59999999999999998" colorSpace="calibratedWhite"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="40" id="gcK-fk-Dq7"/>
                                 <constraint firstAttribute="height" constant="10" id="wWe-jx-efR"/>
@@ -53,18 +62,36 @@
                         </view>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YsP-Qj-Xis">
                             <rect key="frame" x="20" y="24" width="147" height="30"/>
-                            <state key="normal" title="+"/>
+                            <color key="backgroundColor" red="0.2470588235" green="0.37254901959999998" blue="0.63921568630000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <state key="normal" title="+">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <connections>
+                                <action selector="increaseZoom:" destination="-1" eventType="touchUpInside" id="Acl-1x-TVF"/>
+                            </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rt5-9E-y7K">
                             <rect key="frame" x="207" y="24" width="148" height="30"/>
-                            <state key="normal" title="-"/>
+                            <color key="backgroundColor" red="0.2470588235" green="0.37254901959999998" blue="0.63921568630000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <state key="normal" title="-">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <connections>
+                                <action selector="reduceZoom:" destination="-1" eventType="touchUpInside" id="3c9-oI-J02"/>
+                            </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Etm-5g-DUn">
                             <rect key="frame" x="20" y="160" width="335" height="42"/>
+                            <color key="backgroundColor" red="0.81568627449999997" green="0.0078431372550000003" blue="0.1058823529" alpha="1" colorSpace="calibratedRGB"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="42" id="NRa-Rx-3fI"/>
                             </constraints>
-                            <state key="normal" title="Directiion"/>
+                            <state key="normal" title="DIRECTION">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <connections>
+                                <action selector="direction:" destination="-1" eventType="touchUpInside" id="6xs-ZN-uyU"/>
+                            </connections>
                         </button>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
