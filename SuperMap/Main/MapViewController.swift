@@ -11,10 +11,6 @@ import GoogleMaps
 
 class MapViewController: UIViewController {
     
-    @IBAction func reduceZoom(_ sender: Any) {
-    }
-    @IBAction func increaseZoom(_ sender: Any) {
-    }
     let locationManager = CLLocationManager()
     var originLatitude: Double = 0
     var originLongtitude: Double = 0
@@ -76,6 +72,23 @@ class MapViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    func increaseZoom() {
+        zoom += 1
+        self.mapView.animate(toZoom: zoom)
+    }
+    func reduceZoom() {
+        zoom -= 1
+        self.mapView.animate(toZoom: zoom)
+    }
+    func check() {
+        self.alertWith("Thông báo", "Direction")
+    }
+    func alertWith(_ title: String?, _ message: String?) {
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "Đồng ý", style: .cancel, handler: nil)
+        alertController.addAction(okAction)
+        present(alertController, animated: true, completion: nil)
     }
     func getDirection(_ origin: String, _ destination: String) {
         let directionService = DirectionService()
@@ -154,7 +167,7 @@ extension MapViewController: CLLocationManagerDelegate {
             self.originLongtitude = locationLongtitude
             let camera = GMSCameraPosition.camera(
                 withLatitude: locationLatitude,
-                longitude: locationLongtitude, zoom: 15.0)
+                longitude: locationLongtitude, zoom: zoom)
             if mapView.isHidden {
                 mapView.isHidden = false
                 mapView.camera = camera

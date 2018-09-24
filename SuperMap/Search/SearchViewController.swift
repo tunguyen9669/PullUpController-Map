@@ -11,8 +11,20 @@ import MapKit
 import PullUpController
 
 class SearchViewController: PullUpController {
-    @IBOutlet weak var secondView: UIView!
     
+    @IBOutlet weak var secondView: UIView!
+    @IBAction func increaseZoom(_ sender: Any) {
+        (parent as? MapViewController)?.increaseZoom()
+        print((parent as? MapViewController)?.zoom)
+    }
+    @IBAction func reduceZoom(_ sender: Any) {
+        (parent as? MapViewController)?.reduceZoom()
+        print((parent as? MapViewController)?.zoom)
+    }
+    
+    @IBAction func onDirection(_ sender: Any) {
+        (parent as? MapViewController)?.check()
+    }
     @IBOutlet weak var sepatorView: UIView! {
         didSet {
             sepatorView.layer.cornerRadius = sepatorView.frame.height/2

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		055B5DED0C13F0F4CEDB24B8 /* Pods_SuperMap.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 602E78B01AE0EA0315D5D37A /* Pods_SuperMap.framework */; };
 		0B07E0ED5CBA968D309F01C4 /* Pods_SuperMapTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 526FD7DF5C625455DFB3CD66 /* Pods_SuperMapTests.framework */; };
+		84083AE4215880FB002F110E /* Google Direction-07674dbf8433.json in Resources */ = {isa = PBXBuildFile; fileRef = 84083AE3215880FB002F110E /* Google Direction-07674dbf8433.json */; };
 		842FDF54215352060071A533 /* GeocodedWaypointDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842FDF53215352060071A533 /* GeocodedWaypointDTO.swift */; };
 		842FDF56215352290071A533 /* BoundsDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842FDF55215352290071A533 /* BoundsDTO.swift */; };
 		842FDF58215352460071A533 /* DirectionOverviewDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842FDF57215352460071A533 /* DirectionOverviewDTO.swift */; };
@@ -64,6 +65,7 @@
 		526FD7DF5C625455DFB3CD66 /* Pods_SuperMapTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SuperMapTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		602E78B01AE0EA0315D5D37A /* Pods_SuperMap.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SuperMap.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7850F454507AF2DE332F1D56 /* Pods-SuperMapTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SuperMapTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SuperMapTests/Pods-SuperMapTests.release.xcconfig"; sourceTree = "<group>"; };
+		84083AE3215880FB002F110E /* Google Direction-07674dbf8433.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "Google Direction-07674dbf8433.json"; sourceTree = "<group>"; };
 		842FDF53215352060071A533 /* GeocodedWaypointDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeocodedWaypointDTO.swift; sourceTree = "<group>"; };
 		842FDF55215352290071A533 /* BoundsDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoundsDTO.swift; sourceTree = "<group>"; };
 		842FDF57215352460071A533 /* DirectionOverviewDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectionOverviewDTO.swift; sourceTree = "<group>"; };
@@ -212,6 +214,7 @@
 		84846BBC2152110800EBBB8F /* SuperMap */ = {
 			isa = PBXGroup;
 			children = (
+				84083AE3215880FB002F110E /* Google Direction-07674dbf8433.json */,
 				842FDF722153853A0071A533 /* Model */,
 				842FDF6E21537AA00071A533 /* Helper */,
 				842FDF6521535E420071A533 /* APIs */,
@@ -392,6 +395,7 @@
 				84846BF8215222BF00EBBB8F /* MapViewController.xib in Resources */,
 				84846BF421521F3900EBBB8F /* SearchResultCell.xib in Resources */,
 				84846BC52152110900EBBB8F /* Assets.xcassets in Resources */,
+				84083AE4215880FB002F110E /* Google Direction-07674dbf8433.json in Resources */,
 				84846BF0215211B100EBBB8F /* SearchViewController.xib in Resources */,
 				84846BC32152110800EBBB8F /* Main.storyboard in Resources */,
 			);
